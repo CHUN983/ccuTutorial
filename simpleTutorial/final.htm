@@ -1,6 +1,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <!-- 引入 Font Awesome 圖標庫 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <style>
             *{
                 margin:0
@@ -14,7 +16,7 @@
             #menu{
                 background-color: gray;
                 position: sticky;
-                top: 100px;
+                top: 150px;
             }
 
             #menu ul{
@@ -46,25 +48,60 @@
             main{
                 float:right;
                 width: 80%;
-                height: 275px;
+                height: 80%;
                 background-color: #77FFCC;
             }
 
             aside{
                 float: left;
                 width: 20%;
-                height: 275px;
+                height: 80%;
                 background-image: url(01.gif);
                 /*背景圖片: background-image: url(bg.jpg)*/
                 background-repeat: no-repeat; /* 防止圖片重複 */
                 background-size: 100% 100%;  /* 背景圖強制填滿整個 aside */
             }
 
-            footer{
-                clear:both;
-                height: 50px;
-                background-color: pink;
+            footer {
+                clear: both;
+                height: 70px;
+                background-color: lightgray;
+                text-align: center;
+                padding-top: 10px;
+                
             }
+
+
+            footer a {
+                display: inline-flex;  /* 改為 inline-flex 避免變成 block */
+                justify-content: center;  /* 水平置中 */
+                align-items: center;  /* 垂直置中 */
+                margin: 0 10px;
+                text-decoration: none;
+                width: 40px;
+                height: 40px;
+                background-color: white;
+                border-radius: 50%;
+                transition: 0.3s ease-in-out; /* 增加過渡效果 */
+            }
+
+            
+            footer a:hover {
+                background-color: rgb(191, 182, 182);
+            }
+
+            /* 點擊時的效果 */
+            footer a:active {
+                background-color: #555; /* 點擊時背景變深 */
+            }
+
+
+            footer a i {
+                font-size: 20px;
+                color: #333; /* 預設顏色 */
+                transition: color 0.3s ease-in-out; /* 增加平滑變色效果 */
+            }
+
 
             #menu li{
                 position: sticky;
@@ -98,6 +135,18 @@
         </main>
 
         <aside>這裡是aside</aside>
-        <footer>這裡是footer</footer>
+        <footer>
+            <a href="https://www.facebook.com/SUMMER.CCUCSIECamp/?locale=zh_TW">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/ccucsie/">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.threads.net/@ccucsie">
+                <i class="fab fa-threads"></i>
+            </a>
+            <p>© 2025 我的網站. 版權所有.</p>
+        </footer>
+        
     </body>
 </html>
