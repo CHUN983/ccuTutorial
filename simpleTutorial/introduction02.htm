@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自我介紹</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            background: white;
+            padding: 20px;
+            margin: 50px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #333;
+        }
+        .info {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .highlight {
+            color: #007BFF;
+            font-weight: bold;
+        }
+        .animated {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container animated">
+        <img src="02.png" alt="個人照片" class="profile-img">
+        <h1>自我介紹</h1>
+        <p class="info">姓名：<span class="highlight">小黑子</span></p>
+        <p class="info">生日：<span class="highlight">1998/08/02</span></p>
+        <p class="info">興趣：<span class="highlight">唱跳、rap、籃球</span></p>
+        <p class="info">身分：<span class="highlight">實習生</span></p>
+        <p class="info">實習時間：<span class="highlight">兩年半</span></p>
+    </div>
+</body>
+</html>
