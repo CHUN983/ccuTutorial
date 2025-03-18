@@ -109,16 +109,6 @@
             }
         </style>
 
-        <script>
-            function loadProfile() {
-                fetch('introduction02.htm')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById("main-content").innerHTML = data;
-                    })
-                    .catch(error => console.error('載入自我介紹時發生錯誤:', error));
-            }
-        </script>
     </head>
     <body>
         <header>
@@ -127,12 +117,12 @@
         <div id="menu">
             <ul>
                 <li><a href="introduction02.htm" target="contentFrame">自我簡介</a></li>
-                <li><a href="" target="">課程導覽</a></li>
+                <li><a href="curriculum.htm" target="contentFrame">課程導覽</a></li>
                 <li><a href="schedule.htm" target="contentFrame">行程表</a></li>
             </ul>
         </div>
         <main>
-            <iframe  name="contentFrame" src="main.html" width="100%" height="100%" style="border:none;"></iframe>
+            <iframe  name="contentFrame" src="curriculum.htm" width="100%" height="100%" style="border:none;"></iframe>
         </main>
 
         <aside>這裡是aside</aside>

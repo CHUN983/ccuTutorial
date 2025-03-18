@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 基礎課程 - 網頁設計入門</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        h1 {
+            margin: 0;
+        }
+        .content {
+            margin: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+            margin: 10px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML 基礎課程 - 網頁設計入門</h1>
+</header>
+
+<div class="content">
+    <section class="section">
+        <h2>課程目標</h2>
+        <p>本課程將介紹如何建立一個基本的網頁結構，並涵蓋 HTML、CSS 和 JavaScript 的基礎知識。學生將學習如何設計網頁，並學會如何使用 CSS 製作美觀的版面布局。</p>
+    </section>
+
+    <section class="section">
+        <h2>課程大綱</h2>
+        <ul>
+            <li><b>HTML 基礎結構</b> - 介紹 HTML 標籤和網頁結構。</li>
+            <li><b>HTML 元素</b> - 了解網頁元素，如標題、段落、圖片等。</li>
+            <li><b>CSS 樣式設計</b> - 學習如何使用 CSS 設計頁面佈局。</li>
+            <li><b>JavaScript 基礎</b> - 介紹如何使用 JavaScript 進行網頁交互。</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>1. HTML 基礎結構</h2>
+        <p>HTML 是用來設計網頁結構的標記語言。它由一系列標籤組成，通常包括 <code>&lt;html&gt;</code>，<code>&lt;head&gt;</code> 和 <code>&lt;body&gt;</code>。</p>
+        <pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;
+            &lt;img src="01.png" height="150px" width="100%"&gt;
+        &lt;/header&gt;
+        &lt;main&gt;
+            &lt;iframe name="contentFrame" src="main.html" width="100%" height="100%" style="border:none;"&gt;&lt;/iframe&gt;
+        &lt;/main&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+
+    <section class="section">
+        <h2>2. HTML 元素</h2>
+        <p>HTML 元素用來描述網頁中的各種內容，如標題、圖片、連結等。以下是一些常用的 HTML 元素：</p>
+        <pre><code>&lt;footer&gt;
+    &lt;a href="https://www.facebook.com/SUMMER.CCUCSIECamp/?locale=zh_TW"&gt;
+        &lt;i class="fab fa-facebook-f"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href="https://www.instagram.com/ccucsie/"&gt;
+        &lt;i class="fab fa-instagram"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href="https://www.threads.net/@ccucsie"&gt;
+        &lt;i class="fab fa-threads"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;p&gt;© 2025 我的網站. 版權所有.&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+    </section>
+
+    <section class="section">
+        <h2>3. CSS 樣式設計</h2>
+        <p>CSS 用來控制網頁的外觀，像是文字顏色、背景顏色、元素排列等。以下程式碼展示了如何使用 CSS 設定頁面的基本樣式：</p>
+        <pre><code>* {
+    margin: 0;
+}
+
+header {
+    height: 150px;
+    position: sticky;
+    top: 0;
+}
+
+#menu {
+    background-color: gray;
+    position: sticky;
+    top: 150px;
+}
+
+#menu ul {
+    padding: 0;
+    display: table;
+    width: 100%;
+    list-style-type: none;
+}
+
+#menu li {
+    display: table-cell;
+    background-color: white;
+    font-size: 24px;
+    border: 1px black dashed;
+}
+
+#menu li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+#menu li a:hover {
+    color: white;
+    background-color: rgb(69, 59, 56);
+}</code></pre>
+    </section>
+</div>
+
+
+</body>
+</html>
