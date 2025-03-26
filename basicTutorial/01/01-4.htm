@@ -26,6 +26,30 @@
                 border: 1px black dashed;
             }
 
+            #menu li a{
+                display: block;
+                /*
+                目的：讓 <a> 變成「可佔滿整行」的元素
+                why?
+                    1.預設 <a> 是 inline，只會包住內容，不會影響整行。
+                    2.block 讓 <a> 可以佔滿整個父容器的寬度，點擊範圍變大。
+                */
+                
+                text-align: center;
+                text-decoration: none;
+                /*
+                text-decoration: none; 的目的：
+                1.移除 <a> 預設的底線（預設 <a> 會有藍色底線）。
+                2.讓超連結看起來像按鈕或一般的文字，而不是傳統的超連結樣式。
+                */
+
+            }
+
+            #menu li a:hover{
+                color: white;/*讓字的顏色變白*/
+                background-color: rgb(69, 59, 56);/*背景變深*/
+            }
+
             
         </style>
 
