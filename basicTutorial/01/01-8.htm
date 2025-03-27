@@ -78,6 +78,39 @@
                 padding-top: 10px;
             }
             
+            footer a {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                /*width, height, border-radius為一組，
+                border-radius:50%將其設定為圓形
+                */
+                background-color: white;
+
+                /* 
+                讓 <a> 變成「行內彈性容器」，與其他行內元素並排，但仍可設定寬高。
+                
+                為什麼不用 block？
+                    - `block` 會讓 <a> 變成「獨占一行」，無法與其他元素並排。
+                    - `inline-flex` 則保持行內特性，讓 <a> 能與其他元素同一行，但仍具有彈性容器的特性（可調整內容對齊）。
+                
+                功能：
+                    1. 讓 <a> 變成 flex 容器，可用 `justify-content` 和 `align-items` 來調整內容對齊。
+                    2. 讓 `width` 和 `height` 生效，使 <a> 變成固定大小的按鈕。
+                    3. 保持行內特性，不會換行，可與其他元素並排。
+                =>特別適合拿來做並排的設計，如:按鈕、小元件內的內容置中
+                */
+                display: inline-flex;  /* 改為 inline-flex 避免變成 block */
+
+                align-items: center;  /* 垂直置中 */
+                justify-content: center;  /* 水平置中 */
+                text-decoration: none; /*將連結的效果移除*/
+                margin: 0 10px;        /*讓a的上下間距0px，彼此間距10px*/
+                
+                /*最後設計完再教--------------------------------------------------------------*/
+                transition: 0.3s ease-in-out; /* 增加過渡效果 */
+                /*最後設計完再教--------------------------------------------------------------*/
+            }
 
             
         </style>
