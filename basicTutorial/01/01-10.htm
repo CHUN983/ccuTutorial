@@ -121,10 +121,46 @@
                 text-decoration: none; /*將連結的效果移除*/
                 margin: 0 10px;        /*讓a的上下間距0px，彼此間距10px*/
                 
-                /*最後設計完a:hover, a:active再教--------------------------------------------------------------*/
+                /*最後設計完a:hover, a:active後再教--------------------------------------------------------------*/
                 transition: 0.3s ease-in-out; /* 增加過渡效果 */
-                /*最後設計a:hover, a:active完再教--------------------------------------------------------------*/
+                /*最後設計完a:hover, a:active再教--------------------------------------------------------------*/
             }
+
+            footer a i {
+                /* 
+                設定 <a> 內的 <i>（通常是 Icon，例如 FontAwesome 圖示）的樣式：
+                1. 調整字型大小為 20px，使圖示更清晰可見。
+                2. 設定顏色為深灰色 (#333)，讓圖示與背景有適當對比，增強可讀性。
+                */
+                font-size: 20px;
+                color: #333;
+
+                /*最後設計完a:hover, a:active後再教--------------------------------------------------------------*/
+                transition: color 0.3s ease-in-out; /* 增加平滑變色效果 */
+            }
+
+            footer a:hover{
+                /* 
+                當滑鼠懸停在 <a> 上時，改變其背景顏色。
+                這種效果可以用來提供視覺回饋，讓使用者知道按鈕是可點擊的。 
+                */
+                background-color: gray;
+            }
+
+            footer a:hover i{
+                color: white;
+            }
+
+
+            footer a:active{
+                /* 
+                當 <a> 被點擊時（按下但尚未放開），改變其背景顏色。
+                這種效果可以讓使用者感受到「按下」的互動回饋，類似按鈕按下的效果。
+                */
+                background-color: black;
+            }
+
+
 
             
         </style>
@@ -136,13 +172,37 @@
         </header>
         <div id="menu">
             <ul>
-                <li><a href="">自我簡介</a></li>
-                <li><a href="">課程導覽</a></li>
-                <li><a href="">行程表</a></li>
+                <li><a href="../introduction02.htm" target="contentFrame">自我簡介</a></li>
+                <li><a href="../curriculum.htm" target="contentFrame">課程導覽</a></li>
+                <li><a href="../schedule.htm" target="contentFrame">行程表</a></li>
             </ul>
         </div>
         <main>
-            這裡是main
+            <!--
+                這個 <iframe> 主要用來嵌入另一個 HTML 頁面（main.htm），這樣可以在當前網頁內顯示不同的內容。
+                
+                - name="contentFrame" 
+                設定 <iframe> 的名稱，這樣其他頁面的超連結可以設定 target="contentFrame"，
+                點擊時會讓新內容在這個 <iframe> 內顯示，而不會整個頁面重新載入。
+                
+                - src="main.htm"
+                設定初始載入的頁面，這裡預設顯示 main.htm 內容。
+
+                - width="100%" 
+                讓 <iframe> 的寬度填滿父容器（這裡是 <main>），確保畫面不會有間隙。
+
+                - height="100%" 
+                讓 <iframe> 的高度填滿 <main>，但如果 <main> 本身沒有固定高度，可能需要額外的 CSS 設定。
+
+                - style="border:none" 
+                隱藏 <iframe> 預設的邊框，讓它看起來更像是網頁的一部分。
+
+                注意：
+                - <iframe> 可能影響 SEO，因為搜尋引擎不一定會索引內部內容。
+                - 在響應式設計（RWD）上，應確保 <iframe> 能夠適應不同裝置的大小，避免出現滾動條或內容超出問題。
+            -->
+            <iframe name="contentFrame" src="main.htm" width="100%" height="100%" style="border:none"></iframe>
+            
         </main>
         <aside>
             這裡是aside
