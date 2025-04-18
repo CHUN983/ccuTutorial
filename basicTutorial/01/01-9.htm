@@ -1,19 +1,26 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <!-- 引入 Font Awesome 圖標庫 -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        <title>哈哈PY</title>
+        <title>雞你太美</title>
         <style>
             *{
                 margin:0
             }
-            #menu{
+            html,body{
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #nav{
                 background-color: gray;
             }
 
-            #menu ul{
+            #nav ul{
                 padding: 0;/*將ul整體設置為靠邊，方便調整位置*/
                 display: table;/*先將整體結構設置成display: table，此時width才能達到需要的效果。用意：讓ul能像表格一樣排列*/
                 width: 100%;
@@ -22,14 +29,14 @@
             }
 
 
-            #menu li{
+            #nav li{
                 display: table-cell;/*與ul display:table做搭排，使其結果為橫向。類似HTML中<td>的水平排列*/
                 background-color: white;
                 font-size: 24px;
                 border: 1px black dashed;
             }
 
-            #menu li a{
+            #nav li a{
                 display: block;
                 /*
                 目的：讓 <a> 變成「可佔滿整行」的元素
@@ -48,7 +55,7 @@
 
             }
 
-            #menu li a:hover{
+            #nav li a:hover{
                 color: white;/*讓字的顏色變白*/
                 background-color: rgb(69, 59, 56);/*背景變深*/
             }
@@ -170,7 +177,7 @@
         <header>
             <img src="../01.png" height="150px" width="100%">
         </header>
-        <div id="menu">
+        <div id="nav">
             <ul>
                 <li><a href="">自我簡介</a></li>
                 <li><a href="">課程導覽</a></li>
