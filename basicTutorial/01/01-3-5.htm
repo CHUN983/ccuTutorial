@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <title>雞你太美</title>
         <style>
+
+            /*基本的全域設定*/
             *{
                 margin:0
             }
@@ -17,30 +19,16 @@
             }
 
             #nav ul{
-                padding: 0;/*將ul整體設置為靠邊，方便調整位置*/
-                display: table;/*先將整體結構設置成display: table，此時width才能達到需要的效果。用意：讓ul能像表格一樣排列*/
                 width: 100%;
-                border-spacing: 5px;
+                display: table;
                 list-style-type: none;
             }
 
-
             #nav li{
-                display: table-cell;/*與ul display:table做搭排，使其結果為橫向。類似HTML中<td>的水平排列*/
+                display: table-cell;
                 background-color: white;
                 font-size: 24px;
-                border: 1px black dashed;
-            }
-
-            #nav li a{
-                display: block;
-                text-align: center;
-                text-decoration: none;
-            }
-
-            #nav li a:hover{
-                color: white;/*讓字的顏色變白*/
-                background-color: rgb(69, 59, 56);/*背景變深*/
+                border: dashed black 1px;
             }
 
             

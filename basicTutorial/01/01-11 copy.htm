@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <!-- 引入 Font Awesome 圖標庫 -->
-        <script src="https://kit.fontawesome.com/a4a7071706.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
         <title>雞你太美</title>
         <style>
             *{
@@ -14,9 +15,17 @@
                 margin: 0;
                 padding: 0;
             }
-            
+
+            header{
+                height: 150px;
+                position: sticky;
+                top: 0;
+            }
+
             #nav{
                 background-color: gray;
+                position: sticky;
+                top: 150px;
             }
 
             #nav ul{
@@ -98,40 +107,11 @@
                 padding-top: 10px;
             }
             
-            footer a {
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                /*width, height, border-radius為一組，
-                border-radius:50%將其設定為圓形
-                */
-                background-color: white;
 
-                /* 
-                讓 <a> 變成「行內彈性容器」，與其他行內元素並排，但仍可設定寬高。
-                
-                為什麼不用 block？
-                    - `block` 會讓 <a> 變成「獨占一行」，無法與其他元素並排。
-                    - `inline-flex` 則保持行內特性，讓 <a> 能與其他元素同一行，但仍具有彈性容器的特性（可調整內容對齊）。
-                
-                功能：
-                    1. 讓 <a> 變成 flex 容器，可用 `justify-content` 和 `align-items` 來調整內容對齊。
-                    2. 讓 `width` 和 `height` 生效，使 <a> 變成固定大小的按鈕。
-                    3. 保持行內特性，不會換行，可與其他元素並排。
-                =>特別適合拿來做並排的設計，如:按鈕、小元件內的內容置中
-                */
-                display: inline-flex;  /* 改為 inline-flex 避免變成 block */
-
-                align-items: center;  /* 垂直置中 */
-                justify-content: center;  /* 水平置中 */
-                text-decoration: none; /*將連結的效果移除*/
-                margin: 0 10px;        /*讓a的上下間距0px，彼此間距10px*/
-                
-                /*最後設計完a:hover, a:active再教--------------------------------------------------------------*/
-                transition: 0.3s ease-in-out; /* 增加過渡效果 */
-                /*最後設計a:hover, a:active完再教--------------------------------------------------------------*/
+            #nav li{
+                position: sticky;
+                top : 0;
             }
-
             
         </style>
 
@@ -142,13 +122,14 @@
         </header>
         <div id="nav">
             <ul>
-                <li><a href="">自我簡介</a></li>
-                <li><a href="">課程導覽</a></li>
-                <li><a href="">行程表</a></li>
+                <li><a href="../introduction02.htm" target="contentFrame">自我簡介</a></li>
+                <li><a href="../curriculum.htm" target="contentFrame">課程導覽</a></li>
+                <li><a href="../schedule.htm" target="contentFrame">行程表</a></li>
             </ul>
         </div>
         <main>
-            這裡是main
+            <iframe name="contentFrame" src="main.htm" width="100%" height="100%" style="border:none"></iframe>
+            
         </main>
         <aside>
             這裡是aside
@@ -156,13 +137,13 @@
         <footer>
             
             <a href="https://www.facebook.com/SUMMER.CCUCSIECamp/?locale=zh_TW">
-                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fab fa-facebook-f"></i>
             </a>
             <a href="https://www.instagram.com/ccucsie/">
-                <i class="fa-brands fa-instagram"></i>
+                <i class="fab fa-instagram"></i>
             </a>
             <a href="https://www.threads.net/@ccucsie">
-                <i class="fa-brands fa-threads"></i>
+                <i class="fab fa-threads"></i>
             </a>
             <p>© 2025 我的網站. 版權所有.</p>
         </footer>
